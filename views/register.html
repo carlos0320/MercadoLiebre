@@ -16,11 +16,15 @@
     <header class="main-header">
         <div class="main-header__hero">
             <img src="/images/logo-mercado-liebre.svg" class="main-header__logo"/>
-            <form action="#" class="main-header__search">
+            <div class="main-header__search">
+                <input type="text" placeholder=" Buscar productos, marcas">
+                <i class="fas fa-search"></i>
+            </div>
+            <!-- <form action="#" class="main-header__search">
                 <label for="search" class="main-header__searchIcon"><i class="fas fa-search"></i></label>
                 <input type="search" id="search" class="main-header__searchInput" placeholder="Buscar productos">
                 
-            </form>                
+            </form>                 -->
             <div class="main-header__purchase">
                 <span><i class="fas fa-hand-holding-usd"></i></span>
                 <p>Comprá en cuotas y sin tarjeta de crédito</p>
@@ -36,9 +40,9 @@
                 
             </ul>
             <ul class="login__navBar">
-                <li><a href="">Crea tu cuenta </a><i class="fas fa-credit-card"></i></li>
-                <li><a href="">Ingresá </a><i class="fas fa-sign-in-alt"></i></li>
-                <li><a href="">Mis compras  </a><i class="fa fa-shopping-basket fa-lg"></i></li>           
+                <li><a href="register">Crea tu cuenta </a><i class="fas fa-credit-card"></i></li>
+                <li><a href="login">Ingresá </a><i class="fas fa-sign-in-alt"></i></li>
+                <li><a href="home">Mis compras  </a><i class="fa fa-shopping-basket fa-lg"></i></li>           
             </ul>
         </nav>
         <div class="burger-menu">
@@ -49,51 +53,68 @@
     <main >
         <div class="main__section">
             <div class="main__section--register">
-                <input type="text" placeholder="  Nombre y apellido">
-                <input type="text" placeholder="  Nombre de usuario">
-                <input type="text" placeholder="  Edad">
-                <label for="" class="main__section--labelDate">Fecha de Nacimiento</label>
-                <input type="date" placeholder=" mm/dd/yy">
-                <input type="text" placeholder="Domicilio">
-                <label for="" class="main__section--labelDate">Perfil de usuario</label>
-                <div class="main__section--userProfile">
-                    <div class="main__section--buyer">
-                            <input type="radio" id="buyer" value="buyer"
-                        checked>
-                        <label for="buyer">Comprador</label>
+                
+                <form action="home">
+                    <input type="text" placeholder="  Nombre y apellido">
+                    <input type="text" placeholder="  Nombre de usuario">
+                    <input type="text" placeholder="  Edad">
+                    <label for="" class="main__section--labelDate">Fecha de Nacimiento</label>
+                    <input type="date" placeholder=" mm/dd/yy">
+                    <input type="text" placeholder="Domicilio">
+                    <label for="" class="main__section--labelDate">Perfil de usuario</label>
+                    <div class="main__section--userProfile">
+                        <div class="main__section--buyer">
+                                <input type="radio" id="buyer" value="buyer"
+                            checked>
+                            <label for="buyer">Comprador</label>
+                        </div>
+                        <div class="main__section--buyer">
+                                <input type="radio" id="buyer"value="buyer"
+                            checked>
+                            <label for="buyer">Vendedor</label>
+                        </div>
+                        
                     </div>
-                    <div class="main__section--buyer">
-                            <input type="radio" id="buyer"value="buyer"
-                        checked>
-                        <label for="buyer">Vendedor</label>
-                    </div>
-                    
-                </div>
 
-                <label for="" class="main__section--labelDate">Categorias de intereses</label>
-                <div class="main__section--interest">
-                    <div class="main__section-userInterest">
-                        <input type="checkbox" id="interes" value="interest">
-                        <label for="interest">Electro</label>
+                    <label for="" class="main__section--labelDate">Categorias de intereses</label>
+                    <div class="main__section--interest">
+                        <div class="main__section-userInterest">
+                            <input type="checkbox" id="interes" value="interest">
+                            <label for="interest">Electro</label>
+                        </div>
+                        <div class="main__section-userInterest">
+                            <input type="checkbox" id="interes" value="interest">
+                            <label for="interest">Moda</label>
+                        </div>
+                        <div class="main__section-userInterest">
+                            <input type="checkbox" id="interes" value="interest">
+                            <label for="interest">Hogar</label>
+                        </div>
+                        <div class="main__section-userInterest">
+                            <input type="checkbox" id="interes" value="interest">
+                            <label for="interest">Juguetería</label>
+                        </div>
+                        <div class="main__section-userInterest">
+                            <input type="checkbox" id="interes" value="interest">
+                            <label for="interest">Vida sana</label>
+                        </div>
+                    
                     </div>
-                    <div class="main__section-userInterest">
-                        <input type="checkbox" id="interes" value="interest">
-                        <label for="interest">Moda</label>
+                    <label for="foto" class="main__section--labelDate">Foto de usuario</label>
+                    <input type="file" name="foto" id="foto" accept=".jpg,.png." />
+
+                    <div class="main__section--login">
+                        <label for="foto" class="main__section--labelDate">Contraseña</label>
+                        <input type="password" placeholder="  Contraseña">
+                        <label for="foto" class="main__section--labelDate">Confirmar contrseña</label>
+                        <input type="password" placeholder="  Confirmar contraseña">
+                        <button class="main__section--btnLogin" type="submit">Enviar</button>         
+                        <button class="main__section--btnLogin" type="reset">Borrar campos</button>         
                     </div>
-                    <div class="main__section-userInterest">
-                        <input type="checkbox" id="interes" value="interest">
-                        <label for="interest">Hogar</label>
-                    </div>
-                    <div class="main__section-userInterest">
-                        <input type="checkbox" id="interes" value="interest">
-                        <label for="interest">Juguetería</label>
-                    </div>
-                    <div class="main__section-userInterest">
-                        <input type="checkbox" id="interes" value="interest">
-                        <label for="interest">Vida sana</label>
-                    </div>
-                   
-                </div>
+                </form>
+
+               
+        
 
             
            

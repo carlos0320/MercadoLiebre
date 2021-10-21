@@ -8,7 +8,7 @@ body{
     font-size: 12px;    
 }
 
-h1,h2,p{
+h1,h2,p, label{
     margin:0;
 }
 
@@ -18,8 +18,9 @@ header{
 }
 
 .main-header__hero{
-    padding: 20px;
+    padding: 15px;
     display: flex;
+    justify-content: space-between;
     align-items:center;
     flex-wrap: wrap;    
 }
@@ -29,29 +30,45 @@ header{
 }
 
 .main-header__search {
-    width: 50%;
-    
+    width: 40%;    
     border:none;
-    position: relative;    
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    background-color:#fff;
+    margin-left:10px;
+    height: 30px;
+    border-radius:5px;
 }
 
-.main-header__searchIcon{
-    position: absolute;
-    right: 5px;
-    top:5px
+.main-header__search input{
+    width: 85%;
+    border:none;
+    height: 20px;
 }
 
-.main-header__searchIcon i{
-    font-size: 13px;
+.main-header__search i{
+    font-size: 12px;
     color:#666;
 }
 
-.main-header__searchInput{
+/* .main-header__searchIcon{
+    position: absolute;
+    right: 5px;
+    top:5px
+} */
+
+/* .main-header__searchIcon i{
+    font-size: 13px;
+    color:#666;
+} */
+
+/* .main-header__searchInput{
     width: 100%;
     height: 30px;
     border-radius:10px;
     border:none
-}
+} */
 
 
 /* .main-header__searchIcon{
@@ -65,6 +82,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin:20px 0;
 }
 
 .site, .login__navBar{
@@ -95,9 +113,9 @@ a{
 
 .burger-menu__icon{
     color: #fff;
-    font-size: 1.7em;
+    font-size: 1.9em;
     padding: 15px 10px;
-    background-color:#1259c3;
+    background-color:#0044aa;
     border-radius: 4px;
 }
 
@@ -118,11 +136,38 @@ main{
 
 }
 
+.main__section--home{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
 .main__section{
     width: 90%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
+}
+
+.main-product__info--text{
+    display: flex;
+    justify-content: space-between;
+    width:50%;
+    align-items:center;
+}
+
+.main-product__discount{
+    width: 50%;
+    color: green;
+    font-size: 15px;
+    margin: 5px 0;
+}
+.main-product__price{
+    width:50%;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
 }
 
 /* Register */
@@ -146,7 +191,7 @@ main{
     font-size: 13px;
     font-weight: bold;
     width: 300px;
-    margin: 20px auto;
+    margin: 10px auto;
 }
 
 .main__section--userProfile{
@@ -195,11 +240,17 @@ main{
 
 /* Login */
 .main__section--btnLogin{
-    background-color:#1259c3;
+    background-color:#0044aa;
     color:white;
     height: 30px;
     border-radius:4px;
-    border:none
+    border:none;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.main__section--btnLogin:hover{
+    background-color:#0022AA;
 }
 
 
@@ -210,8 +261,7 @@ main{
 }
 
 .main__container{
-    width: 100%;
-    
+    width: 100%;    
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
@@ -221,9 +271,30 @@ main{
 .main-product__container{
     width:100%;
     margin:10px;
-    height: inherit;
+    border:none       
+}
+
+.main-product__description{
+    display: none;
+}
+
+
+
+.main-product__container:hover .main-product__description{
+    display: block;
+    font-size:14px;
+    color:#666;
+    margin-top: 20px;
     
 }
+
+.main-product__container:hover .main-product__container,.main-product__info{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
+}
+
+
+
 
 .main-product__image{
     width: 100%;    
@@ -234,15 +305,18 @@ main{
     background-color:#fff;
     padding: 15px;
     position: relative;
+    border:none;
+    height: auto;
+    transition: all 0.5s;
 }
 
 
 .main-product__info i{
     display: block;
-    font-size: 18px;
+    font-size: 12px;
     padding:4px;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border: 1px solid #39b54a;
     color:#39b54a;
     background-color: #FFF;
@@ -257,25 +331,13 @@ main{
     justify-content: center;
 }
 
-
-.main-product__info--text{
-    display: flex;
-    width:100%;
-    align-items:center;
+.main-product__iconTruck:hover {
+    transition: all 0.5s;
+    transform: rotate(-90deg)
 }
 
-.main-product__discount{
-    width: 70%;
-    color: green;
-    font-size: 14px;
-    margin: 5px 0;
-}
-.main-product__price{
-    width:30%;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 5px 0;
-}
+
+
 /* 
 .main-product__description{
     font-size:14px;
@@ -283,9 +345,9 @@ main{
     margin-top: 20px;
 } */
 
-.main-product__description{
+/* .main-product__description{
     display: none;
-}
+} */
 
 footer{
     margin-top: 30px;
@@ -327,10 +389,7 @@ footer p{
 
 
 @media screen and (min-width:361px){
-    .main-product__container,.main-product__info{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-
-    }
+   
     .site,.login__navBar{
         display: block;
     }
@@ -338,20 +397,36 @@ footer p{
         display: none;
     }
 
-    .main-product__description{
+    /* .main-product__description{
         display: block;
         font-size:14px;
         color:#666;
         margin-top: 20px;
-    }
+    } */
     .main-product__container{
         width:40%;
     }
 
-    .main-header__logo,.main-header__search,.main-header__purchase{
-        width: 30%;
+    .main-header__logo,.main-header__search{
+        width: 25%;
     }
+
+    .main-header__search{
+        height: 15px;
+        background-color:#EAC926
+    }
+    
+    .main-header__search input{
+        height: 15px;
+    }
+
+    .main-header__search i{
+        background-color:#fff;
+        font-size: 15px;
+    }
+
     .main-header__purchase{
+        width: 40%;
         margin-left: 10px;
     }
 
@@ -361,25 +436,48 @@ footer p{
         margin-left: 20px;
     }
     .site{
-        width: 30%;
+        width: 40%;
         display: flex;
         justify-content: space-between;
-        margin-left: 20px;
+        
         flex-wrap: wrap;
     }
 
+    
+.main-product__info--text{
+    display: flex;
+    justify-content: space-between;
+    width:90%;
+    align-items:center;
+}
+
+.main-product__discount{
+    width: 50%;
+    color: green;
+    font-size: 12px;
+    margin: 5px 0;
+}
+.main-product__price{
+    width:30%;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+    
+    
     .login__navBar{
-        width: 50%;
-        margin-right: 30px;
-    
-    }
-    
-    .login__navBar{        
+       
+        margin-right: 20px;        
         display:flex;
-        justify-content: center;
-        margin-left: 20px;
+        justify-content: space-around;
+        
         align-items:center;
         flex-wrap:wrap;
+    }
+    .login__navBar i{
+        
+        font-size: 10px;
     }
 
     .login__navBar li{
@@ -389,7 +487,61 @@ footer p{
 }
 
 @media screen and (min-width:768px){
+
+
+    .nav__container{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 20px;
+    }
+    .site{
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+        
+        flex-wrap: wrap;
+    }
+
+    .login__navBar{
+        width: 40%;
+    }
+
+
     .main-product__container{
         width:20%;
+    }
+
+    .main-product__info--text{
+        display: flex;
+        justify-content: space-between;
+        width:90%;
+        align-items:center;
+    }
+    
+    .main-product__discount{
+        width: 50%;
+        color: green;
+        font-size: 15px;
+        margin: 5px 0;
+    }
+    .main-product__price{
+        width:50%;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 5px 0;
+    }
+
+    .footer-main__container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-card{
+        width: 30%;
+    }
+
+    .footer-card:hover span i{
+        color:#0022AA;
     }
 }

@@ -16,11 +16,15 @@
     <header class="main-header">
         <div class="main-header__hero">
             <img src="/images/logo-mercado-liebre.svg" class="main-header__logo"/>
-            <form action="#" class="main-header__search">
+            <div class="main-header__search">
+                <input type="text" placeholder=" Buscar productos, marcas">
+                <i class="fas fa-search"></i>
+            </div>
+            <!-- <form action="#" class="main-header__search">
                 <label for="search" class="main-header__searchIcon"><i class="fas fa-search"></i></label>
                 <input type="search" id="search" class="main-header__searchInput" placeholder="Buscar productos">
                 
-            </form>                
+            </form>                 -->
             <div class="main-header__purchase">
                 <span><i class="fas fa-hand-holding-usd"></i></span>
                 <p>Comprá en cuotas y sin tarjeta de crédito</p>
@@ -32,13 +36,12 @@
                 <li><a href="">Ofertas</a> </li>
                 <li><a href="">Tiendas oficiales</a></li>
                 <li><a href="">Vender</a></li>
-                <li><a href="">Ayuda</a></li>
-                
+                <li><a href="">Ayuda</a></li>                
             </ul>
             <ul class="login__navBar">
-                <li><a href="">Crea tu cuenta </a><i class="fas fa-credit-card"></i></li>
-                <li><a href="">Ingresá </a><i class="fas fa-sign-in-alt"></i></li>
-                <li><a href="">Mis compras  </a><i class="fa fa-shopping-basket fa-lg"></i></li>           
+                <li><a href="register">Crea tu cuenta </a><i class="fas fa-credit-card"></i></li>
+                <li><a href="login">Ingresá </a><i class="fas fa-sign-in-alt"></i></li>
+                <li><a href="home">Mis compras  </a><i class="fa fa-shopping-basket fa-lg"></i></li>           
             </ul>
         </nav>
         <div class="burger-menu">
@@ -49,7 +52,7 @@
         <img src="images/img-home-banner.jpg" alt="" class="slider__image">
     </section>
     <main >
-        <div class="main__section">
+        <div class="main__section--home">
             <h2 class="main-product__title">Basado en tu última visita</h2>
             <div class="main__container">
                 <article class="main-product__container">
@@ -77,7 +80,52 @@
                 <article class="main-product__container">
                     <img src="/images/img-samsung-galaxy-s10.jpg" alt="" class="main-product__image">
                     <div class="main-product__info">
-                        <i class="fas fa-truck"></i>  
+                        <i class="fas fa-truck main-product__iconTruck"></i>  
+                        <div class="main-product__info--text">
+                            <p class="main-product__price">$6.770</p>
+                            <p class="main-product__discount">40% off</p>
+                        </div>
+                        <p class="main-product__description">Cafetera Moulinex</p>
+                    </div>
+                </article>
+                <article class="main-product__container">
+                    <img src="/images/img-tv-samsung-smart.jpg" alt="" class="main-product__image">
+                    <div class="main-product__info">
+                        <i class="fas fa-truck main-product__iconTruck"></i>  
+                        <div class="main-product__info--text">
+                            <p class="main-product__price">$6.770</p>
+                            <p class="main-product__discount">40% off</p>
+                        </div>
+                        <p class="main-product__description">Cafetera Moulinex</p>
+                    </div>
+                </article>
+                
+                <article class="main-product__container">
+                    <img src="/images/img-cafetera-moulinex.jpg" alt="" class="main-product__image">
+                    <div class="main-product__info">
+                        <i class="fas fa-truck main-product__iconTruck"></i>  
+                        <div class="main-product__info--text">
+                            <p class="main-product__price">$6.770</p>
+                            <p class="main-product__discount">40% off</p>
+                        </div>
+                        <p class="main-product__description">Cafetera Moulinex</p>
+                    </div>
+                </article>
+                <article class="main-product__container">
+                    <img src="images/img-macbook-pro-2019.jpg" alt="" class="main-product__image">
+                    <div class="main-product__info">
+                        <i class="fas fa-truck main-product__iconTruck"></i>  
+                        <div class="main-product__info--text">
+                            <p class="main-product__price">$6.770</p>
+                            <p class="main-product__discount">40% off</p>
+                        </div>
+                        <p class="main-product__description">Cafetera Moulinex</p>
+                    </div>
+                </article>
+                <article class="main-product__container">
+                    <img src="/images/img-samsung-galaxy-s10.jpg" alt="" class="main-product__image">
+                    <div class="main-product__info">
+                        <i class="fas fa-truck main-product__iconTruck"></i>  
                         <div class="main-product__info--text">
                             <p class="main-product__price">$6.770</p>
                             <p class="main-product__discount">40% off</p>

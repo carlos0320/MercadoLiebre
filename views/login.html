@@ -16,11 +16,15 @@
     <header class="main-header">
         <div class="main-header__hero">
             <img src="/images/logo-mercado-liebre.svg" class="main-header__logo"/>
-            <form action="#" class="main-header__search">
+            <div class="main-header__search">
+                <input type="text" placeholder=" Buscar productos, marcas">
+                <i class="fas fa-search"></i>
+            </div>
+            <!-- <form action="#" class="main-header__search">
                 <label for="search" class="main-header__searchIcon"><i class="fas fa-search"></i></label>
                 <input type="search" id="search" class="main-header__searchInput" placeholder="Buscar productos">
                 
-            </form>                
+            </form>                 -->
             <div class="main-header__purchase">
                 <span><i class="fas fa-hand-holding-usd"></i></span>
                 <p>Comprá en cuotas y sin tarjeta de crédito</p>
@@ -36,9 +40,9 @@
                 
             </ul>
             <ul class="login__navBar">
-                <li><a href="">Crea tu cuenta </a><i class="fas fa-credit-card"></i></li>
-                <li><a href="">Ingresá </a><i class="fas fa-sign-in-alt"></i></li>
-                <li><a href="">Mis compras  </a><i class="fa fa-shopping-basket fa-lg"></i></li>           
+                <li><a href="register">Crea tu cuenta </a><i class="fas fa-credit-card"></i></li>
+                <li><a href="login">Ingresá </a><i class="fas fa-sign-in-alt"></i></li>
+                <li><a href="home">Mis compras  </a><i class="fa fa-shopping-basket fa-lg"></i></li>           
             </ul>
         </nav>
         <div class="burger-menu">
@@ -49,9 +53,12 @@
     <main >
         <div class="main__section">
             <div class="main__section--login">
-                <input type="text" placeholder="  Nombre y apellido">
-                <input type="text" placeholder="  Elegí tu contraseña">
-                <button class="main__section--btnLogin">Enviar</button>         
+                <form action="home">
+                    <input type="text" placeholder="  Nombre y apellido">
+                    <input type="text" placeholder="  Elegí tu contraseña">
+                    <button class="main__section--btnLogin" type="submit">Enviar</button> 
+                </form>
+                       
             </div>
            
         </div>
